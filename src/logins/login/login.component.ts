@@ -52,14 +52,14 @@ export class LoginComponent implements OnInit {
 
   OnCityChange(event)
  {
-   console.log(event);
+   //console.log(event);
    this.loginService.objFilteredSchoolList = this.loginService.objSchoolList.filter(r=>r.FCityId==event)    
  }
 
 
  onSubmit(form: NgForm) {  
   this.counter = 0;
-  console.log(this.volunteerService.volunteerList + ", Name: " + form.value.UserNam + ", Password: "+ form.value.Password);
+ // console.log(this.volunteerService.volunteerList + ", Name: " + form.value.UserNam + ", Password: "+ form.value.Password);
   this.volunteerService.volunteerList.forEach(element => {
     if(element.Name==form.value.UserNam && element.VPassword == form.value.Password )
     {

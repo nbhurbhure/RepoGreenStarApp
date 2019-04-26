@@ -37,16 +37,16 @@ if(this.counter>100)
 
         this.counter = this.counter + 1;
 
-        console.log("counter: " + this.counter);
+        //console.log("counter: " + this.counter);
         if(this.counter<2)
         {
-          console.log("called getRoleScreenMappingListById: " + this.counter);
+         // console.log("called getRoleScreenMappingListById: " + this.counter);
           this.roleScreenMappingService.getRoleScreenMappingListById();
         }
       }
        return null;
     }
-    console.log('sidebar: ' + ScreenName + " RoleId:" + appconstants.GlobalRoleId);
+    //console.log('sidebar: ' + ScreenName + " RoleId:" + appconstants.GlobalRoleId);
     return this.roleScreenMappingService.roleScreenMappingListById.filter(r=>r.ScreenName.toLowerCase()==ScreenName.toLowerCase()).length > 0;
   }
 }

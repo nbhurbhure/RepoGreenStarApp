@@ -79,7 +79,7 @@ onSubmit(form: NgForm) {
       if (form.value.Id == null) {
         this.studentDataService.postStudentData(form.value)
 
-        console.log(this.weekInfoService.weekInfoList);
+        //console.log(this.weekInfoService.weekInfoList);
         this.studentDataService.studentDataList.filter(r=>r.FMonthInfoId==form.value.FMonthInfoId && r.FParameterId==form.value.FParameterId && r.FStudentId==form.value.FStudentId).forEach
         (element => {
           this.weekday = new Date(element.YearName.toString() + '-' + element.MonthName.toString() + '-' + element.DayName.toString());

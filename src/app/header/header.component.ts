@@ -26,16 +26,16 @@ checkFunction(ScreenName : string): boolean {
     {
       this.counter = this.counter + 1;
 
-      console.log("header counter: " + this.counter);
+     // console.log("header counter: " + this.counter);
       if(this.counter<2)
       {
-        console.log("called header getRoleScreenMappingListById: " + this.counter);
+        //console.log("called header getRoleScreenMappingListById: " + this.counter);
         this.roleScreenMappingService.getRoleScreenMappingListById();
       }
     }
      return null;
   }
-  console.log('sidebar: ' + ScreenName + " RoleId:" + appconstants.GlobalRoleId);
+  //console.log('sidebar: ' + ScreenName + " RoleId:" + appconstants.GlobalRoleId);
   return this.roleScreenMappingService.roleScreenMappingListById.filter(r=>r.ScreenName.toLowerCase()==ScreenName.toLowerCase()).length > 0;
 }
 
