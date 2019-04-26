@@ -1,0 +1,13 @@
+<table class="table table-sm table-hover">
+  <tr *ngFor="let yearInfo of yearInfoService.yearInfoList">
+    <td>{{yearInfo.Name}} </td>
+    <td>
+      <a class="btn" (click)="showForEdit(yearInfo)">
+        <i class="fa fa-pencil-square-o"></i>
+      </a>
+      <a class="btn text-danger" (click)="onDelete(yearInfo.Id)">
+        <i class="fa fa-trash-o"></i>
+      </a>
+    </td>
+  </tr>
+</table>

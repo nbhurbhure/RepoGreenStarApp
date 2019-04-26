@@ -1,0 +1,20 @@
+<table class="table table-sm table-hover">
+    <thead>
+       
+        <th scope="col">RollNo</th>
+        <th scope="col">Student Name</th>
+        <th scope="col">Caste</th>
+        <th scope="col">Date</th>
+        <th scope="col">Parameter Name</th>
+        <th scope="col">Data</th>
+
+      </thead>
+  <tr *ngFor="let individualTracking of individualTrackingService.individualTrackingList">
+    <td>{{individualTracking.RollNo}} </td>
+    <td>{{individualTracking.StudentNam}} </td>
+    <td>{{individualTracking.Caste}} </td>
+    <td>{{individualTracking.DayInfo}} </td>
+    <td>{{individualTracking.ParameterNam}}</td>
+    <td>{{individualTracking.DataValue}}</td>
+  </tr>
+</table>

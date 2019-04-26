@@ -1,0 +1,86 @@
+
+<div class="row">
+    <div class="col-md-12">
+        <gstar-green-star-by-student></gstar-green-star-by-student>
+      </div>
+</div>
+
+<div class="row">
+<div class="col-md-6">
+  <gstar-green-star-by-student></gstar-green-star-by-student>
+</div>
+<div class="col-md-6">
+<gstar-green-star-by-student></gstar-green-star-by-student>
+</div>
+</div>
+
+<!--
+   <div class="col-md-1" style="padding-top:27px;"> <button class="btn btn-lg btn-secondary" type="button"
+     (click)="CreateGreenStar()">
+      Show Green Star</button> </div>
+
+<svg viewBox="0 0 250 250">
+  <polygon points="110,85 110,60 90,60" attr.fill="{{StarArray[2]}}" style="stroke:black;stroke-width: 0.1;" />
+  <text x="105" y="70" text-anchor="middle" fill="black" font-size="5">2</text>
+  <polygon points="110,85 110,60 130,60" attr.fill="{{StarArray[3]}}" style="stroke:black;stroke-width: 0.1;" />
+  <text x="115" y="70" text-anchor="middle" fill="black" font-size="5">3</text>
+  <polygon points="110,85 140,80 130,60" attr.fill="{{StarArray[4]}}" style="stroke:black;stroke-width: 0.1;" />
+  <text x="126" y="75" text-anchor="middle" fill="black" font-size="5">4</text>
+  <polygon points="110,85 140,80 145,95" attr.fill="{{StarArray[5]}}" style="stroke:black;stroke-width: 0.1;" />
+  <text x="131" y="88" text-anchor="middle" fill="black" font-size="5">5</text>
+   <polygon points="110,85 125,105 145,95" attr.fill="{{StarArray[6]}}" style="stroke:black;stroke-width: 0.1;" />
+  <text x="126" y="97" text-anchor="middle" fill="black" font-size="5">6</text>
+  <polygon points="110,85 125,105 110,115" attr.fill="{{StarArray[7]}}" style="stroke:black;stroke-width: 0.1;" />
+  <text x=115 y="101" text-anchor="middle" fill="black" font-size="5">7</text>
+  <polygon points="110,85 90,105 110,115" attr.fill="{{StarArray[8]}}" style="stroke:black;stroke-width: 0.1;" />
+  <text x="103" y="101" text-anchor="middle" fill="black" font-size="5">8</text>
+ <polygon points="110,85 90,105 75,95" attr.fill="{{StarArray[9]}}" style="stroke:black;stroke-width: 0.1;" />
+  <text x="91" y="95" text-anchor="middle" fill="black" font-size="5">9</text>
+  <polygon points="110,85 80,80 75,95" attr.fill="{{StarArray[10]}}" style="stroke:black;stroke-width: 0.1;" />
+  <text x="90" y="87" text-anchor="middle" fill="black" font-size="5">10</text>
+  <polygon points="110,85 80,80 90,60" attr.fill="{{StarArray[11]}}" style="stroke:black;stroke-width: 0.1;" />
+  <text x="93" y="75" text-anchor="middle" fill="black" font-size="5">11</text>
+  <polygon points="110,60 110,40 90,60" attr.fill="{{StarArray[12]}}" style="stroke:black;stroke-width: 0.1;" />
+  <text x="103" y="53" text-anchor="middle" fill="black" font-size="5">12</text>
+  <polygon points="110,60 110,40 130,60" attr.fill="{{StarArray[13]}}" style="stroke:black;stroke-width: 0.1;" />
+  <text x="116" y="53" text-anchor="middle" fill="black" font-size="5">13</text>
+  <polygon points="140,80 170,70 130,60" attr.fill="{{StarArray[14]}}" style="stroke:black;stroke-width: 0.1;" />
+  <text x="146" y="70" text-anchor="middle" fill="black" font-size="5">14</text>
+  <polygon points="140,80 170,70 145,95" attr.fill="{{StarArray[15]}}" style="stroke:black;stroke-width: 0.1;" />
+  <text x="151" y="81" text-anchor="middle" fill="black" font-size="5">15</text>
+  <polygon points="125,105 145,125 145,95" attr.fill="{{StarArray[16]}}" style="stroke:black;stroke-width: 0.1;" />
+  <text x="138" y="108" text-anchor="middle" fill="black" font-size="5">16</text>
+  <polygon points="125,105 145,125 110,115" attr.fill="{{StarArray[17]}}" style="stroke:black;stroke-width: 0.1;" />
+  <text x="126" y="115" text-anchor="middle" fill="black" font-size="5">17</text>
+  <polygon points="90,105 75,125 110,115" attr.fill="{{StarArray[18]}}" style="stroke:black;stroke-width: 0.1;" />
+  <text x="94" y="115" text-anchor="middle" fill="black" font-size="5">18</text>
+  <polygon points="90,105 75,125 75,95" attr.fill="{{StarArray[19]}}" style="stroke:black;stroke-width: 0.1;" />
+  <text x="80" y="108" text-anchor="middle" fill="black" font-size="5">19</text>
+  <polygon points="80,80 50,70 75,95" attr.fill="{{StarArray[20]}}" style="stroke:black;stroke-width: 0.1;" />
+  <text x="70" y="83" text-anchor="middle" fill="black" font-size="5">20</text>
+  <polygon points="80,80 50,70 90,60" attr.fill="{{StarArray[21]}}" style="stroke:black;stroke-width: 0.1;" />
+  <text x="72" y="70" text-anchor="middle" fill="black" font-size="5">21</text>
+  <polygon points="110,40 110,10 90,60" attr.fill="{{StarArray[22]}}" style="stroke:black;stroke-width: 0.1;" />
+  <text x="105" y="38" text-anchor="middle" fill="black" font-size="5">22</text>
+  <polygon points="110,40 110,10 130,60" attr.fill="{{StarArray[23]}}" style="stroke:black;stroke-width: 0.1;" />
+  <text x="116" y="38" text-anchor="middle" fill="black" font-size="5">23</text>
+  <polygon points="170,70 210,60 130,60" attr.fill="{{StarArray[24]}}" style="stroke:black;stroke-width: 0.1;" />
+  <text x="170" y="65" text-anchor="middle" fill="black" font-size="5">24</text>
+  <polygon points="170,70 210,60 145,95" attr.fill="{{StarArray[25]}}" style="stroke:black;stroke-width: 0.1;" />
+  <text x="175" y="75" text-anchor="middle" fill="black" font-size="5">25</text>
+  <polygon points="145,125 170,150 145,95" attr.fill="{{StarArray[26]}}" style="stroke:black;stroke-width: 0.1;" />
+  <text x="153" y="123" text-anchor="middle" fill="black" font-size="5">26</text>
+  <polygon points="145,125 170,150 110,115" attr.fill="{{StarArray[27]}}" style="stroke:black;stroke-width: 0.1;" />
+  <text x="141" y="130" text-anchor="middle" fill="black" font-size="5">27</text>
+  <polygon points="75,125 50,150 110,115" attr.fill="{{StarArray[28]}}" style="stroke:black;stroke-width: 0.1;" />
+  <text x="79" y="130" text-anchor="middle" fill="black" font-size="5">28</text>
+  <polygon points="75,125 50,150 75,95" attr.fill="{{StarArray[29]}}" style="stroke:black;stroke-width: 0.1;" />
+  <text x="66" y="126" text-anchor="middle" fill="black" font-size="5">29</text>
+  <polygon points="50,70 10,60 75,95" attr.fill="{{StarArray[30]}}" style="stroke:black;stroke-width: 0.1;" />
+  <text x="45" y="75" text-anchor="middle" fill="black" font-size="5">30</text>
+  <polygon points="50,70 10,60 90,60" attr.fill="{{StarArray[31]}}" style="stroke:black;stroke-width: 0.1;" />
+  <text x="45" y="65" text-anchor="middle"  fill="black" font-size="5">31</text>
+  <polygon points="110,75 113,80 120,81 115,85 115,90 110,88 103,90 105,85 100,80 105,80" attr.fill="{{StarArray[1]}}" style="stroke:black;stroke-width: 0.1;" />
+  <text x="110" y="85" text-anchor="middle" fill="black" font-size="5">1</text>
+</svg>
+-->

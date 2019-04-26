@@ -1,0 +1,57 @@
+<form class="studentData-form" #studentDataForm="ngForm" (ngSubmit)="onSubmit(studentDataForm)">
+  <input type="hidden" name="Id" #Id="ngModel" [(ngModel)]="studentDataService.selectedStudentData.Id">
+    <div class="form-group">
+      <input class="form-control" name="Name" #Name="ngModel" [(ngModel)]="studentDataService.selectedStudentData.Name"
+        placeholder="Name" required>
+      <div class="validation-error" *ngIf="Name.invalid && Name.touched">This Field is Required.</div>
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="StudentStatus" #StudentStatus="ngModel" [(ngModel)]="studentDataService.selectedStudentData.StudentStatus"
+        placeholder="StudentStatus">
+    </div>
+  <div class="form-group">
+      <select name="FYearInfoId" class="form-control"  (ngModelChange) = "OnYearInfoChange($event)" [(ngModel)]="studentDataService.selectedStudentData.FYearInfoId" #FYearInfoId="ngModel" required>
+          <option [value]="null" selected>Select YearInfo...</option>
+          <option *ngFor="let lstYearInfo of studentDataService.objYearInfoList" [value]="lstYearInfo.Id">{{lstYearInfo.Name}}</option>
+    </select> 
+    <div class="validation-error" *ngIf="FYearInfoId.invalid && FYearInfoId.touched">This Field is Required.</div>  
+  </div>
+  <div class="form-group">
+      <select name="FMonthInfoId" class="form-control" (ngModelChange) = "OnMonthInfoChange($event)" [(ngModel)]="studentDataService.selectedStudentData.FMonthInfoId" #FMonthInfoId="ngModel" required>
+          <option [value]="null" selected>Select MonthInfo...</option>
+          <option *ngFor="let lstMonthInfo of studentDataService.objFilteredMonthInfoList" [value]="lstMonthInfo.Id">{{lstMonthInfo.Name}}</option>
+    </select> 
+    <div class="validation-error" *ngIf="FMonthInfoId.invalid && FMonthInfoId.touched">This Field is Required.</div>  
+  </div>
+  <div class="form-group">
+      <select name="FDayInfoId" class="form-control" [(ngModel)]="studentDataService.selectedStudentData.FDayInfoId" #FDayInfoId="ngModel" required>
+          <option [value]="null" selected>Select DayInfo...</option>
+          <option *ngFor="let lstDayInfo of studentDataService.objFilteredDayInfoList" [value]="lstDayInfo.Id">{{lstDayInfo.Name}}</option>
+    </select> 
+    <div class="validation-error" *ngIf="FDayInfoId.invalid && FDayInfoId.touched">This Field is Required.</div>  
+  </div>
+  <div class="form-group">
+      <select name="FStudentId" class="form-control" [(ngModel)]="studentDataService.selectedStudentData.FStudentId" #FStudentId="ngModel" required>
+          <option [value]="null" selected>Select Student...</option>
+          <option *ngFor="let lstStudent of studentDataService.objStudentList" [value]="lstStudent.Id">{{lstStudent.Name}}</option>
+    </select> 
+    <div class="validation-error" *ngIf="FStudentId.invalid && FStudentId.touched">This Field is Required.</div>  
+  </div>
+  <div class="form-group">
+      <select name="FParameterId" class="form-control" [(ngModel)]="studentDataService.selectedStudentData.FParameterId" #FParameterId="ngModel" required>
+          <option [value]="null" selected>Select Parameter...</option>
+          <option *ngFor="let lstParameter of studentDataService.objParameterList" [value]="lstParameter.Id">{{lstParameter.Name}}</option>
+    </select> 
+    <div class="validation-error" *ngIf="FParameterId.invalid && FParameterId.touched">This Field is Required.</div>  
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-8">
+      <button [disabled]="!studentDataForm.valid" type="submit" class="btn btn-lg btn-block btn-info">
+        <i class="fa fa-floppy-o"></i> Submit</button>
+    </div>
+    <div class="form-group col-md-4">
+      <button type="button" class="btn btn-lg btn-block btn-secondary" (click)="resetForm(studentDataForm)">
+        <i class="fa fa-repeat"></i> Reset</button>
+    </div>
+  </div>
+</form>

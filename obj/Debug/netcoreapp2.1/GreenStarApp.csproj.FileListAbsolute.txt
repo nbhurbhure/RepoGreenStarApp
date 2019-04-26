@@ -1,0 +1,15 @@
+C:\Project\GreenStarApp\GreenStarApp\obj\Debug\netcoreapp2.1\GreenStarApp.csproj.CoreCompileInputs.cache
+C:\Project\GreenStarApp\GreenStarApp\obj\Debug\netcoreapp2.1\GreenStarApp.AssemblyInfoInputs.cache
+C:\Project\GreenStarApp\GreenStarApp\obj\Debug\netcoreapp2.1\GreenStarApp.AssemblyInfo.cs
+C:\Project\GreenStarApp\GreenStarApp\obj\Debug\netcoreapp2.1\GreenStarApp.RazorAssemblyInfo.cache
+C:\Project\GreenStarApp\GreenStarApp\obj\Debug\netcoreapp2.1\GreenStarApp.RazorAssemblyInfo.cs
+C:\Project\GreenStarApp\GreenStarApp\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Project\GreenStarApp\GreenStarApp\bin\Debug\netcoreapp2.1\GreenStarApp.deps.json
+C:\Project\GreenStarApp\GreenStarApp\bin\Debug\netcoreapp2.1\GreenStarApp.runtimeconfig.json
+C:\Project\GreenStarApp\GreenStarApp\bin\Debug\netcoreapp2.1\GreenStarApp.runtimeconfig.dev.json
+C:\Project\GreenStarApp\GreenStarApp\bin\Debug\netcoreapp2.1\GreenStarApp.dll
+C:\Project\GreenStarApp\GreenStarApp\obj\Debug\netcoreapp2.1\GreenStarApp.RazorTargetAssemblyInfo.cache
+C:\Project\GreenStarApp\GreenStarApp\bin\Debug\netcoreapp2.1\GreenStarApp.pdb
+C:\Project\GreenStarApp\GreenStarApp\obj\Debug\netcoreapp2.1\GreenStarApp.dll
+C:\Project\GreenStarApp\GreenStarApp\obj\Debug\netcoreapp2.1\GreenStarApp.pdb
+C:\Project\GreenStarApp\GreenStarApp\obj\Debug\netcoreapp2.1\GreenStarApp.csprojAssemblyReference.cache

@@ -1,0 +1,29 @@
+<form class="dayInfo-form" #dayInfoForm="ngForm" (ngSubmit)="onSubmit(dayInfoForm)">
+  <input type="hidden" name="Id" #Id="ngModel" [(ngModel)]="dayInfoService.selectedDayInfo.Id">
+    <div class="form-group">
+      <input class="form-control" name="Name" #Name="ngModel" [(ngModel)]="dayInfoService.selectedDayInfo.Name"
+        placeholder="Name" required>
+      <div class="validation-error" *ngIf="Name.invalid && Name.touched">This Field is Required.</div>
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="Day" #Day="ngModel" [(ngModel)]="dayInfoService.selectedDayInfo.Day"
+        placeholder="Day">
+    </div>
+  <div class="form-group">
+      <select name="FMonthInfoId" class="form-control" [(ngModel)]="dayInfoService.selectedDayInfo.FMonthInfoId" #FMonthInfoId="ngModel" required>
+          <option [value]="null" selected>Select MonthInfo...</option>
+          <option *ngFor="let lstMonthInfo of dayInfoService.objMonthInfoList" [value]="lstMonthInfo.Id">{{lstMonthInfo.Name}}</option>
+    </select> 
+    <div class="validation-error" *ngIf="FMonthInfoId.invalid && FMonthInfoId.touched">This Field is Required.</div>  
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-8">
+      <button [disabled]="!dayInfoForm.valid" type="submit" class="btn btn-lg btn-block btn-info">
+        <i class="fa fa-floppy-o"></i> Submit</button>
+    </div>
+    <div class="form-group col-md-4">
+      <button type="button" class="btn btn-lg btn-block btn-secondary" (click)="resetForm(dayInfoForm)">
+        <i class="fa fa-repeat"></i> Reset</button>
+    </div>
+  </div>
+</form>

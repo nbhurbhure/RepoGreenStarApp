@@ -1,0 +1,25 @@
+<form class="city-form" #cityForm="ngForm" (ngSubmit)="onSubmit(cityForm)">
+  <input type="hidden" name="Id" #Id="ngModel" [(ngModel)]="cityService.selectedCity.Id">
+    <div class="form-group">
+      <input class="form-control" name="Name" #Name="ngModel" [(ngModel)]="cityService.selectedCity.Name"
+        placeholder="Name" required>
+      <div class="validation-error" *ngIf="Name.invalid && Name.touched">This Field is Required.</div>
+    </div>
+  <div class="form-group">
+      <select name="FOutreachId" class="form-control" [(ngModel)]="cityService.selectedCity.FOutreachId" #FOutreachId="ngModel" required>
+          <option [value]="null" selected>Select Outreach...</option>
+          <option *ngFor="let lstOutreach of cityService.objOutreachList" [value]="lstOutreach.Id">{{lstOutreach.Name}}</option>
+    </select> 
+    <div class="validation-error" *ngIf="FOutreachId.invalid && FOutreachId.touched">This Field is Required.</div>  
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-8">
+      <button [disabled]="!cityForm.valid" type="submit" class="btn btn-lg btn-block btn-info">
+        <i class="fa fa-floppy-o"></i> Submit</button>
+    </div>
+    <div class="form-group col-md-4">
+      <button type="button" class="btn btn-lg btn-block btn-secondary" (click)="resetForm(cityForm)">
+        <i class="fa fa-repeat"></i> Reset</button>
+    </div>
+  </div>
+</form>

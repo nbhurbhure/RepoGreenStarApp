@@ -1,0 +1,14 @@
+<table class="table table-bordered">
+  <thead>
+    <th scope="col">Standard Name</th>
+    <th scope="col">Section Name</th>
+    <th scope="col">Parameter Name</th>
+    <th scope="col">Student Status</th>
+  </thead>
+  <tr *ngFor="let classWiseTracking of classWiseTrackingService.classWiseTrackingList">
+    <td>{{classWiseTracking.StandardNam}} </td>
+    <td>{{classWiseTracking.SectionNam}} </td>
+    <td>{{classWiseTracking.ParameterNam}} </td>
+    <td>{{classWiseTracking.StudentStatus}} </td>
+  </tr>
+</table>

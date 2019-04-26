@@ -1,0 +1,15 @@
+<table class="table table-sm table-hover">
+  <tr *ngFor="let studentData of studentDataService.studentDataList">
+    <td>{{studentData.Name}} </td>
+    <td>{{studentData.StudentStatus}} </td>
+    <td>{{studentData.YearInfoName}} </td>
+    <td>
+      <a class="btn" (click)="showForEdit(studentData)">
+        <i class="fa fa-pencil-square-o"></i>
+      </a>
+      <a class="btn text-danger" (click)="onDelete(studentData.Id)">
+        <i class="fa fa-trash-o"></i>
+      </a>
+    </td>
+  </tr>
+</table>

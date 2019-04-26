@@ -1,0 +1,29 @@
+<form class="classWiseTracking-form" #classWiseTrackingForm="ngForm" (ngSubmit)="onSubmit(classWiseTrackingForm)">
+  <input type="hidden" name="Id" #Id="ngModel" [(ngModel)]="classWiseTrackingService.selectedClassWiseTracking.Id">
+    <div class="form-group">
+      <input class="form-control" name="StandardNam" #StandardNam="ngModel" [(ngModel)]="classWiseTrackingService.selectedClassWiseTracking.StandardNam"
+        placeholder="StandardNam">
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="SectionNam" #SectionNam="ngModel" [(ngModel)]="classWiseTrackingService.selectedClassWiseTracking.SectionNam"
+        placeholder="SectionNam">
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="ParameterNam" #ParameterNam="ngModel" [(ngModel)]="classWiseTrackingService.selectedClassWiseTracking.ParameterNam"
+        placeholder="ParameterNam">
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="StudentStatus" #StudentStatus="ngModel" [(ngModel)]="classWiseTrackingService.selectedClassWiseTracking.StudentStatus"
+        placeholder="StudentStatus">
+    </div>
+  <div class="form-row">
+    <div class="form-group col-md-8">
+      <button [disabled]="!classWiseTrackingForm.valid" type="submit" class="btn btn-lg btn-block btn-info">
+        <i class="fa fa-floppy-o"></i> Submit</button>
+    </div>
+    <div class="form-group col-md-4">
+      <button type="button" class="btn btn-lg btn-block btn-secondary" (click)="resetForm(classWiseTrackingForm)">
+        <i class="fa fa-repeat"></i> Reset</button>
+    </div>
+  </div>
+</form>

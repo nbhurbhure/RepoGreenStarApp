@@ -1,0 +1,27 @@
+<form class="teamStudentMapping-form" #teamStudentMappingForm="ngForm" (ngSubmit)="onSubmit(teamStudentMappingForm)">
+  <input type="hidden" name="Id" #Id="ngModel" [(ngModel)]="teamStudentMappingService.selectedTeamStudentMapping.Id">
+  <div class="form-group">
+      <select name="FTeamId" class="form-control" [(ngModel)]="teamStudentMappingService.selectedTeamStudentMapping.FTeamId" #FTeamId="ngModel" required>
+          <option [value]="null" selected>Select Team...</option>
+          <option *ngFor="let lstTeam of teamStudentMappingService.objTeamList" [value]="lstTeam.Id">{{lstTeam.Name}}</option>
+    </select> 
+    <div class="validation-error" *ngIf="FTeamId.invalid && FTeamId.touched">This Field is Required.</div>  
+  </div>
+  <div class="form-group">
+      <select name="FStudentId" class="form-control" [(ngModel)]="teamStudentMappingService.selectedTeamStudentMapping.FStudentId" #FStudentId="ngModel" required>
+          <option [value]="null" selected>Select Student...</option>
+          <option *ngFor="let lstStudent of teamStudentMappingService.objStudentList" [value]="lstStudent.Id">{{lstStudent.Name}}</option>
+    </select> 
+    <div class="validation-error" *ngIf="FStudentId.invalid && FStudentId.touched">This Field is Required.</div>  
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-8">
+      <button [disabled]="!teamStudentMappingForm.valid" type="submit" class="btn btn-lg btn-block btn-info">
+        <i class="fa fa-floppy-o"></i> Submit</button>
+    </div>
+    <div class="form-group col-md-4">
+      <button type="button" class="btn btn-lg btn-block btn-secondary" (click)="resetForm(teamStudentMappingForm)">
+        <i class="fa fa-repeat"></i> Reset</button>
+    </div>
+  </div>
+</form>

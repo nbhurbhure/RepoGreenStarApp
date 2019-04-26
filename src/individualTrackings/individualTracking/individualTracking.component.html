@@ -1,0 +1,49 @@
+<form class="individualTracking-form" #individualTrackingForm="ngForm" (ngSubmit)="onSubmit(individualTrackingForm)">
+  <input type="hidden" name="Id" #Id="ngModel" [(ngModel)]="individualTrackingService.selectedIndividualTracking.Id">
+    <div class="form-group">
+      <input class="form-control" name="SchoolNam" #SchoolNam="ngModel" [(ngModel)]="individualTrackingService.selectedIndividualTracking.SchoolNam"
+        placeholder="SchoolNam">
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="RollNo" #RollNo="ngModel" [(ngModel)]="individualTrackingService.selectedIndividualTracking.RollNo"
+        placeholder="RollNo">
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="StudentNam" #StudentNam="ngModel" [(ngModel)]="individualTrackingService.selectedIndividualTracking.StudentNam"
+        placeholder="StudentNam">
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="StudentCaste" #StudentCaste="ngModel" [(ngModel)]="individualTrackingService.selectedIndividualTracking.StudentCaste"
+        placeholder="StudentCaste">
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="DayInfo" #DayInfo="ngModel" [(ngModel)]="individualTrackingService.selectedIndividualTracking.DayInfo"
+        placeholder="DayInfo">
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="MonthInfo" #MonthInfo="ngModel" [(ngModel)]="individualTrackingService.selectedIndividualTracking.MonthInfo"
+        placeholder="MonthInfo">
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="YearInfo" #YearInfo="ngModel" [(ngModel)]="individualTrackingService.selectedIndividualTracking.YearInfo"
+        placeholder="YearInfo">
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="ParameterNam" #ParameterNam="ngModel" [(ngModel)]="individualTrackingService.selectedIndividualTracking.ParameterNam"
+        placeholder="ParameterNam">
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="DataValue" #DataValue="ngModel" [(ngModel)]="individualTrackingService.selectedIndividualTracking.DataValue"
+        placeholder="DataValue">
+    </div>
+  <div class="form-row">
+    <div class="form-group col-md-8">
+      <button [disabled]="!individualTrackingForm.valid" type="submit" class="btn btn-lg btn-block btn-info">
+        <i class="fa fa-floppy-o"></i> Submit</button>
+    </div>
+    <div class="form-group col-md-4">
+      <button type="button" class="btn btn-lg btn-block btn-secondary" (click)="resetForm(individualTrackingForm)">
+        <i class="fa fa-repeat"></i> Reset</button>
+    </div>
+  </div>
+</form>

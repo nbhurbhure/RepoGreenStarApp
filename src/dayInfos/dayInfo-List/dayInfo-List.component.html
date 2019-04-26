@@ -1,0 +1,15 @@
+<table class="table table-sm table-hover">
+  <tr *ngFor="let dayInfo of dayInfoService.dayInfoList">
+    <td>{{dayInfo.Name}} </td>
+    <td>{{dayInfo.Day}} </td>
+    <td>{{dayInfo.MonthInfoName}} </td>
+    <td>
+      <a class="btn" (click)="showForEdit(dayInfo)">
+        <i class="fa fa-pencil-square-o"></i>
+      </a>
+      <a class="btn text-danger" (click)="onDelete(dayInfo.Id)">
+        <i class="fa fa-trash-o"></i>
+      </a>
+    </td>
+  </tr>
+</table>

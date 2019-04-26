@@ -1,0 +1,37 @@
+<form class="comparativeChart-form" #comparativeChartForm="ngForm" (ngSubmit)="onSubmit(comparativeChartForm)">
+  <input type="hidden" name="Id" #Id="ngModel" [(ngModel)]="comparativeChartService.selectedComparativeChart.Id">
+    <div class="form-group">
+      <input class="form-control" name="StandardNam" #StandardNam="ngModel" [(ngModel)]="comparativeChartService.selectedComparativeChart.StandardNam"
+        placeholder="StandardNam">
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="SectionNam" #SectionNam="ngModel" [(ngModel)]="comparativeChartService.selectedComparativeChart.SectionNam"
+        placeholder="SectionNam">
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="ParameterNam" #ParameterNam="ngModel" [(ngModel)]="comparativeChartService.selectedComparativeChart.ParameterNam"
+        placeholder="ParameterNam">
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="MonthNam" #MonthNam="ngModel" [(ngModel)]="comparativeChartService.selectedComparativeChart.MonthNam"
+        placeholder="MonthNam">
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="MonthPercent" #MonthPercent="ngModel" [(ngModel)]="comparativeChartService.selectedComparativeChart.MonthPercent"
+        placeholder="MonthPercent">
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="IncreasePercent" #IncreasePercent="ngModel" [(ngModel)]="comparativeChartService.selectedComparativeChart.IncreasePercent"
+        placeholder="IncreasePercent">
+    </div>
+  <div class="form-row">
+    <div class="form-group col-md-8">
+      <button [disabled]="!comparativeChartForm.valid" type="submit" class="btn btn-lg btn-block btn-info">
+        <i class="fa fa-floppy-o"></i> Submit</button>
+    </div>
+    <div class="form-group col-md-4">
+      <button type="button" class="btn btn-lg btn-block btn-secondary" (click)="resetForm(comparativeChartForm)">
+        <i class="fa fa-repeat"></i> Reset</button>
+    </div>
+  </div>
+</form>

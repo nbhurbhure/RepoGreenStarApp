@@ -1,0 +1,27 @@
+<form class="roleScreenMapping-form" #roleScreenMappingForm="ngForm" (ngSubmit)="onSubmit(roleScreenMappingForm)">
+  <input type="hidden" name="Id" #Id="ngModel" [(ngModel)]="roleScreenMappingService.selectedRoleScreenMapping.Id">
+  <div class="form-group">
+      <select name="FVroleId" class="form-control" [(ngModel)]="roleScreenMappingService.selectedRoleScreenMapping.FVroleId" #FVroleId="ngModel" required>
+          <option [value]="null" selected>Select Vrole...</option>
+          <option *ngFor="let lstVrole of roleScreenMappingService.objVroleList" [value]="lstVrole.Id">{{lstVrole.Name}}</option>
+    </select> 
+    <div class="validation-error" *ngIf="FVroleId.invalid && FVroleId.touched">This Field is Required.</div>  
+  </div>
+  <div class="form-group">
+      <select name="FScreenId" class="form-control" [(ngModel)]="roleScreenMappingService.selectedRoleScreenMapping.FScreenId" #FScreenId="ngModel" required>
+          <option [value]="null" selected>Select Screen...</option>
+          <option *ngFor="let lstScreen of roleScreenMappingService.objScreenList" [value]="lstScreen.Id">{{lstScreen.Name}}</option>
+    </select> 
+    <div class="validation-error" *ngIf="FScreenId.invalid && FScreenId.touched">This Field is Required.</div>  
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-8">
+      <button [disabled]="!roleScreenMappingForm.valid" type="submit" class="btn btn-lg btn-block btn-info">
+        <i class="fa fa-floppy-o"></i> Submit</button>
+    </div>
+    <div class="form-group col-md-4">
+      <button type="button" class="btn btn-lg btn-block btn-secondary" (click)="resetForm(roleScreenMappingForm)">
+        <i class="fa fa-repeat"></i> Reset</button>
+    </div>
+  </div>
+</form>

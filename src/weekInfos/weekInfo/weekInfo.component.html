@@ -1,0 +1,22 @@
+<form class="weekInfo-form" #weekInfoForm="ngForm" (ngSubmit)="onSubmit(weekInfoForm)">
+  <input type="hidden" name="Id" #Id="ngModel" [(ngModel)]="weekInfoService.selectedWeekInfo.Id">
+    <div class="form-group">
+      <input class="form-control" name="Name" #Name="ngModel" [(ngModel)]="weekInfoService.selectedWeekInfo.Name"
+        placeholder="Name" required>
+      <div class="validation-error" *ngIf="Name.invalid && Name.touched">This Field is Required.</div>
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="WorkingDay" #WorkingDay="ngModel" [(ngModel)]="weekInfoService.selectedWeekInfo.WorkingDay"
+        placeholder="WorkingDay">
+    </div>
+  <div class="form-row">
+    <div class="form-group col-md-8">
+      <button [disabled]="!weekInfoForm.valid" type="submit" class="btn btn-lg btn-block btn-info">
+        <i class="fa fa-floppy-o"></i> Submit</button>
+    </div>
+    <div class="form-group col-md-4">
+      <button type="button" class="btn btn-lg btn-block btn-secondary" (click)="resetForm(weekInfoForm)">
+        <i class="fa fa-repeat"></i> Reset</button>
+    </div>
+  </div>
+</form>

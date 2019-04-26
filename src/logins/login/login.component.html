@@ -1,0 +1,45 @@
+<form class="login-form" #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+  <div class="form-group">
+    <select name="FOutreachId" class="form-control" (ngModelChange) = "OnOutreachChange($event)" [(ngModel)]="loginService.selectedLogin.FOutreachId" #FOutreachId="ngModel" required>
+        <option [value]="null" selected>Select Outreach...</option>
+        <option *ngFor="let lstOutreach of loginService.objOutreachList" [value]="lstOutreach.Id">{{lstOutreach.Name}}</option>
+  </select> 
+  <div class="validation-error" *ngIf="FOutreachId.invalid && FOutreachId.touched">This Field is Required.</div>  
+</div>
+<div class="form-group">
+    <select name="FCityId" class="form-control" 
+    (ngModelChange) = "OnCityChange($event)" [(ngModel)]="loginService.selectedLogin.FCityId" #FCityId="ngModel" required>
+        <option [value]="null" selected>Select City...</option>
+        <option *ngFor="let lstCity of loginService.objFilteredCityList" [value]="lstCity.Id">{{lstCity.Name}}</option>
+  </select> 
+  <div class="validation-error" *ngIf="FCityId.invalid && FCityId.touched">This Field is Required.</div>  
+</div>
+<div class="form-group">
+    <select name="FSchoolId" class="form-control" [(ngModel)]="loginService.selectedLogin.FSchoolId" #FSchoolId="ngModel" required>
+        <option [value]="null" selected>Select School...</option>
+        <option *ngFor="let lstSchool of loginService.objFilteredSchoolList" [value]="lstSchool.Id">{{lstSchool.Name}}</option>
+  </select> 
+  <div class="validation-error" *ngIf="FSchoolId.invalid && FSchoolId.touched">This Field is Required.</div>  
+</div>
+
+  
+  <input type="hidden" name="Id" #Id="ngModel" [(ngModel)]="loginService.selectedLogin.Id">
+    <div class="form-group">
+      <input class="form-control" name="UserNam" #UserNam="ngModel" [(ngModel)]="loginService.selectedLogin.UserNam"
+        placeholder="UserNam">
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="Password" #Password="ngModel" [(ngModel)]="loginService.selectedLogin.Password"
+        placeholder="Password">
+    </div>
+  <div class="form-row">
+    <div class="form-group col-md-8">
+      <button [disabled]="!loginForm.valid" type="submit" class="btn btn-lg btn-block btn-info">
+        <i class="fa fa-floppy-o"></i> Submit</button>
+    </div>
+    <div class="form-group col-md-4">
+      <button type="button" class="btn btn-lg btn-block btn-secondary" (click)="resetForm(loginForm)">
+        <i class="fa fa-repeat"></i> Reset</button>
+    </div>
+  </div>
+</form>

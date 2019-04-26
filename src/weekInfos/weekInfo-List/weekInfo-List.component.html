@@ -1,0 +1,14 @@
+<table class="table table-sm table-hover">
+  <tr *ngFor="let weekInfo of weekInfoService.weekInfoList">
+    <td>{{weekInfo.Name}} </td>
+    <td>{{weekInfo.WorkingDay}} </td>
+    <td>
+      <a class="btn" (click)="showForEdit(weekInfo)">
+        <i class="fa fa-pencil-square-o"></i>
+      </a>
+      <a class="btn text-danger" (click)="onDelete(weekInfo.Id)">
+        <i class="fa fa-trash-o"></i>
+      </a>
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,25 @@
+<form class="section-form" #sectionForm="ngForm" (ngSubmit)="onSubmit(sectionForm)">
+  <input type="hidden" name="Id" #Id="ngModel" [(ngModel)]="sectionService.selectedSection.Id">
+    <div class="form-group">
+      <input class="form-control" name="Name" #Name="ngModel" [(ngModel)]="sectionService.selectedSection.Name"
+        placeholder="Name" required>
+      <div class="validation-error" *ngIf="Name.invalid && Name.touched">This Field is Required.</div>
+    </div>
+  <div class="form-group">
+      <select name="FStandardId" class="form-control" [(ngModel)]="sectionService.selectedSection.FStandardId" #FStandardId="ngModel" required>
+          <option [value]="null" selected>Select Standard...</option>
+          <option *ngFor="let lstStandard of sectionService.objStandardList" [value]="lstStandard.Id">{{lstStandard.Name}}</option>
+    </select> 
+    <div class="validation-error" *ngIf="FStandardId.invalid && FStandardId.touched">This Field is Required.</div>  
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-8">
+      <button [disabled]="!sectionForm.valid" type="submit" class="btn btn-lg btn-block btn-info">
+        <i class="fa fa-floppy-o"></i> Submit</button>
+    </div>
+    <div class="form-group col-md-4">
+      <button type="button" class="btn btn-lg btn-block btn-secondary" (click)="resetForm(sectionForm)">
+        <i class="fa fa-repeat"></i> Reset</button>
+    </div>
+  </div>
+</form>

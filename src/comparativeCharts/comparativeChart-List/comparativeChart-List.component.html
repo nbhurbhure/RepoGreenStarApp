@@ -1,0 +1,18 @@
+<table class="table table-sm table-hover">
+  <thead>
+      <th scope="col">Standard Name</th>
+      <th scope="col">Section Name</th>
+      <th scope="col">Parameter Name</th>
+      <th scope="col">Month Name</th>
+      <th scope="col">Month Percent</th>
+      <th scope="col">Increase Percent</th>
+  </thead>
+  <tr *ngFor="let comparativeChart of comparativeChartService.comparativeChartList">
+    <td>{{comparativeChart.StandardNam}} </td>
+    <td>{{comparativeChart.SectionNam}} </td>
+    <td>{{comparativeChart.ParameterNam}} </td>
+    <td>{{comparativeChart.MonthNam}} </td>
+    <td>{{comparativeChart.MonthPercent}} </td>
+    <td>{{comparativeChart.IncreasePercent}} </td>
+  </tr>
+</table>

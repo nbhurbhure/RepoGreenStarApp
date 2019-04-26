@@ -1,0 +1,26 @@
+<form class="teacher-form" #teacherForm="ngForm" (ngSubmit)="onSubmit(teacherForm)">
+  <input type="hidden" name="Id" #Id="ngModel" [(ngModel)]="teacherService.selectedTeacher.Id">
+    <div class="form-group">
+      <input class="form-control" name="Name" #Name="ngModel" [(ngModel)]="teacherService.selectedTeacher.Name"
+        placeholder="Name" required>
+      <div class="validation-error" *ngIf="Name.invalid && Name.touched">This Field is Required.</div>
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="ContactInfo" #ContactInfo="ngModel" [(ngModel)]="teacherService.selectedTeacher.ContactInfo"
+        placeholder="ContactInfo">
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="ContactNo" #ContactNo="ngModel" [(ngModel)]="teacherService.selectedTeacher.ContactNo"
+        placeholder="ContactNo">
+    </div>
+  <div class="form-row">
+    <div class="form-group col-md-8">
+      <button [disabled]="!teacherForm.valid" type="submit" class="btn btn-lg btn-block btn-info">
+        <i class="fa fa-floppy-o"></i> Submit</button>
+    </div>
+    <div class="form-group col-md-4">
+      <button type="button" class="btn btn-lg btn-block btn-secondary" (click)="resetForm(teacherForm)">
+        <i class="fa fa-repeat"></i> Reset</button>
+    </div>
+  </div>
+</form>

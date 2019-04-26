@@ -1,0 +1,25 @@
+<form class="teamWiseTracking-form" #teamWiseTrackingForm="ngForm" (ngSubmit)="onSubmit(teamWiseTrackingForm)">
+  <input type="hidden" name="Id" #Id="ngModel" [(ngModel)]="teamWiseTrackingService.selectedTeamWiseTracking.Id">
+    <div class="form-group">
+      <input class="form-control" name="TeamNam" #TeamNam="ngModel" [(ngModel)]="teamWiseTrackingService.selectedTeamWiseTracking.TeamNam"
+        placeholder="TeamNam">
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="ParameterNam" #ParameterNam="ngModel" [(ngModel)]="teamWiseTrackingService.selectedTeamWiseTracking.ParameterNam"
+        placeholder="ParameterNam">
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="StudentStatus" #StudentStatus="ngModel" [(ngModel)]="teamWiseTrackingService.selectedTeamWiseTracking.StudentStatus"
+        placeholder="StudentStatus">
+    </div>
+  <div class="form-row">
+    <div class="form-group col-md-8">
+      <button [disabled]="!teamWiseTrackingForm.valid" type="submit" class="btn btn-lg btn-block btn-info">
+        <i class="fa fa-floppy-o"></i> Submit</button>
+    </div>
+    <div class="form-group col-md-4">
+      <button type="button" class="btn btn-lg btn-block btn-secondary" (click)="resetForm(teamWiseTrackingForm)">
+        <i class="fa fa-repeat"></i> Reset</button>
+    </div>
+  </div>
+</form>

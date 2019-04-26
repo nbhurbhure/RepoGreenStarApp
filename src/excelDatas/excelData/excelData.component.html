@@ -1,0 +1,69 @@
+<form class="excelData-form" #excelDataForm="ngForm" (ngSubmit)="onSubmit(excelDataForm)">
+  <input type="hidden" name="Id" #Id="ngModel" [(ngModel)]="excelDataService.selectedExcelData.Id">
+    <div class="form-group">
+      <input class="form-control" name="Location" #Location="ngModel" [(ngModel)]="excelDataService.selectedExcelData.Location"
+        placeholder="Location">
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="SchoolNam" #SchoolNam="ngModel" [(ngModel)]="excelDataService.selectedExcelData.SchoolNam"
+        placeholder="SchoolNam">
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="SchoolAddress" #SchoolAddress="ngModel" [(ngModel)]="excelDataService.selectedExcelData.SchoolAddress"
+        placeholder="SchoolAddress">
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="Standard" #Standard="ngModel" [(ngModel)]="excelDataService.selectedExcelData.Standard"
+        placeholder="Standard">
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="Section" #Section="ngModel" [(ngModel)]="excelDataService.selectedExcelData.Section"
+        placeholder="Section">
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="TeacherNam" #TeacherNam="ngModel" [(ngModel)]="excelDataService.selectedExcelData.TeacherNam"
+        placeholder="TeacherNam">
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="StudentNam" #StudentNam="ngModel" [(ngModel)]="excelDataService.selectedExcelData.StudentNam"
+        placeholder="StudentNam">
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="Year" #Year="ngModel" [(ngModel)]="excelDataService.selectedExcelData.Year"
+        placeholder="Year">
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="Month" #Month="ngModel" [(ngModel)]="excelDataService.selectedExcelData.Month"
+        placeholder="Month">
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="Date" #Date="ngModel" [(ngModel)]="excelDataService.selectedExcelData.Date"
+        placeholder="Date">
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="TeamNam" #TeamNam="ngModel" [(ngModel)]="excelDataService.selectedExcelData.TeamNam"
+        placeholder="TeamNam">
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="LeaderNam" #LeaderNam="ngModel" [(ngModel)]="excelDataService.selectedExcelData.LeaderNam"
+        placeholder="LeaderNam">
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="ParameterNam" #ParameterNam="ngModel" [(ngModel)]="excelDataService.selectedExcelData.ParameterNam"
+        placeholder="ParameterNam">
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="Marks" #Marks="ngModel" [(ngModel)]="excelDataService.selectedExcelData.Marks"
+        placeholder="Marks">
+    </div>
+  <div class="form-row">
+    <div class="form-group col-md-8">
+      <button [disabled]="!excelDataForm.valid" type="submit" class="btn btn-lg btn-block btn-info">
+        <i class="fa fa-floppy-o"></i> Submit</button>
+    </div>
+    <div class="form-group col-md-4">
+      <button type="button" class="btn btn-lg btn-block btn-secondary" (click)="resetForm(excelDataForm)">
+        <i class="fa fa-repeat"></i> Reset</button>
+    </div>
+  </div>
+</form>

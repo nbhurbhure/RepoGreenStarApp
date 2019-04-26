@@ -1,0 +1,155 @@
+<gstar-layout></gstar-layout>
+
+<!--<div style="background-color:#0a290a">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <div style="background-color:whitesmoke;">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-10" style="text-align: center;height: 60px;align-items: center">
+        <h2 style="font-family: cursive">GREEN STAR APPLICATION</h2>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+
+    <div class="row">
+      <div class="col-md-2" >
+        &nbsp;
+        <br>&nbsp;
+        <br>&nbsp;
+        
+        <div id="MainMenu">
+          <div class="list-group panel">
+            <a href="#" class="list-group-item list-group-item-success" data-parent="#MainMenu">Dashboard</a>
+            
+            <a href="#PerformanceMetrics" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu" >Performance Metrics
+              <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="collapse" id="PerformanceMetrics" >
+              <a href="" class="list-group-item" [routerLink]="['/individualTrackings']">Individual Tracking</a>
+              <a href="" class="list-group-item" [routerLink]="['/classWiseTrackings']">ClassWise Tracking</a>
+              <a href="" class="list-group-item" [routerLink]="['/teamWiseTrackings']">TeamWise Tracking</a>
+            </div>
+
+            <a href="#EncouragingMetrics" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Encouraging Metrics
+              <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="collapse" id="EncouragingMetrics">
+              <a href="" class="list-group-item" [routerLink]="['/comparativeCharts']">Comparative Chart</a>
+            </div>
+
+            <a href="#SuperAdmin" *ngIf="(checkFunction('yearInfo'))" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Super Admin
+              <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="collapse" id="SuperAdmin">
+                <a href="#" *ngIf="(checkFunction('yearInfo'))" class="list-group-item" [routerLink]="['/yearInfos']">YearInfo</a>
+                <a href="#" *ngIf="(checkFunction('monthInfo'))" class="list-group-item" [routerLink]="['/monthInfos']">MonthInfo</a>
+                <a href="#" *ngIf="(checkFunction('dayInfo'))" class="list-group-item" [routerLink]="['/dayInfos']">DayInfo</a>
+            </div>
+
+            <a href="#AdminSection" *ngIf="(checkFunction('Outreach'))" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Admin Section
+              <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="collapse" id="AdminSection">
+                <a href="#" *ngIf="(checkFunction('Outreach'))" class="list-group-item" [routerLink]="['/outreachs']">Outreach</a>
+                <a href="#" *ngIf="(checkFunction('City'))" class="list-group-item" [routerLink]="['/citys']">City</a>
+                <a href="#" *ngIf="(checkFunction('role'))" class="list-group-item" [routerLink]="['/vroles']">Role</a>
+                <a href="#" *ngIf="(checkFunction('Screen'))" class="list-group-item" [routerLink]="['/screens']">Screen</a>
+                <a href="#" *ngIf="(checkFunction('RoleScreenMapping'))" class="list-group-item" [routerLink]="['/roleScreenMappings']">Role-Screen</a>
+            </div>
+
+            <a href="#POCAdmin" *ngIf="(checkFunction('color'))" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">POC Admin
+                <i class="fa fa-caret-down"></i>
+              </a>
+              <div class="collapse" id="POCAdmin">
+                <a href="#" *ngIf="(checkFunction('color'))" class="list-group-item" [routerLink]="['/colors']">Color</a>
+                <a href="#" *ngIf="(checkFunction('holidayType'))" class="list-group-item" [routerLink]="['/holidayTypes']">HolidayType</a>
+                <a href="#" *ngIf="(checkFunction('school'))" class="list-group-item" [routerLink]="['/schools']">School</a>
+                <a href="#" *ngIf="(checkFunction('volunteer'))" class="list-group-item" [routerLink]="['/volunteers']">Volunteer</a>
+                <a href="#" *ngIf="(checkFunction('holiday'))" class="list-group-item" [routerLink]="['/holidays']">Holiday</a>
+                <a href="#" *ngIf="(checkFunction('login'))" class="list-group-item" [routerLink]="['/logins']">Login</a>
+                <a href="#" *ngIf="(checkFunction('weekInfo'))" class="list-group-item" [routerLink]="['/weekInfos']">WeekInfo</a>
+                <a href="#" *ngIf="(checkFunction('parameter'))" class="list-group-item" [routerLink]="['/parameters']">Parameter</a>
+              </div>
+
+            <a href="#SchoolPOC" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">School POC
+              <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="collapse" id="SchoolPOC">
+              <a href="#" class="list-group-item" [routerLink]="['/teachers']">Teacher</a>
+              <a href="#" class="list-group-item" [routerLink]="['/standards']">Standard</a>
+              <a href="#" class="list-group-item" [routerLink]="['/sections']">Section</a>
+              <a href="#" class="list-group-item" [routerLink]="['/teams']">Team</a>
+              <a href="#" class="list-group-item" [routerLink]="['/students']">Student</a>
+              <a href="#" class="list-group-item" [routerLink]="['/studentDatas']">StudentData</a>
+              <a href="#" class="list-group-item" [routerLink]="['/teamStudentMappings']">Team-Student</a>
+            </div>
+            <a href="#LoadData" class="list-group-item list-group-item-success" data-parent="#MainMenu">Load Data</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-10"  *ngIf="loginStatus">
+        <div id="main" style="background-color:#0a290a;height: 770px; ">
+          <div>
+            <br>&nbsp;
+            <br>
+          </div>
+          <div style="margin: 20px">
+            <div class="row" style="background-color:white;height: 550px;align-items: center">
+
+              <div class="col-md-12">
+                <div>&nbsp;</div>
+                <div class="container" style="background-color:whitesmoke; border-color: black;border-width: 1px;">
+
+                  <div>
+                    <span></span>
+                  </div>
+                  <br>
+                  <router-outlet></router-outlet>
+                  <br>
+
+                </div>
+                <div>&nbsp;</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-10"  *ngIf="!loginStatus">
+        <div id="main" style="background-color:#0a290a;height: 770px; ">
+          <div>
+            <br>&nbsp;
+            <br>
+          </div>
+          <div style="margin: 20px">
+            <div class="row" style="background-color:white;height: 550px;align-items: center">
+
+              <div class="col-md-12">
+                <div>&nbsp;</div>
+                <div class="container" style="background-color:whitesmoke; border-color: black;border-width: 1px;">
+
+                  <div>
+                    <span></span>
+                  </div>
+                  <br>
+                  <router-outlet></router-outlet>
+                  <br>
+
+                </div>
+                <div>&nbsp;</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+-->

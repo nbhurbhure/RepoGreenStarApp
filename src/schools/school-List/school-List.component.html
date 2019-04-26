@@ -1,0 +1,15 @@
+<table class="table table-sm table-hover">
+  <tr *ngFor="let school of schoolService.schoolList">
+    <td>{{school.Name}} </td>
+    <td>{{school.Address}} </td>
+    <td>{{school.ContactNo}} </td>
+    <td>
+      <a class="btn" (click)="showForEdit(school)">
+        <i class="fa fa-pencil-square-o"></i>
+      </a>
+      <a class="btn text-danger" (click)="onDelete(school.Id)">
+        <i class="fa fa-trash-o"></i>
+      </a>
+    </td>
+  </tr>
+</table>

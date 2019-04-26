@@ -1,0 +1,12 @@
+<table class="table table-sm table-hover">
+    <thead>
+        <th scope="col">Team Name</th>
+        <th scope="col">Parameter Name</th>
+        <th scope="col">Student Status</th>
+      </thead>
+  <tr *ngFor="let teamWiseTracking of teamWiseTrackingService.teamWiseTrackingList">
+    <td>{{teamWiseTracking.TeamNam}} </td>
+    <td>{{teamWiseTracking.ParameterNam}} </td>
+    <td>{{teamWiseTracking.StudentStatus}} </td>
+  </tr>
+</table>

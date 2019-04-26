@@ -1,0 +1,40 @@
+<form class="volunteer-form" #volunteerForm="ngForm" (ngSubmit)="onSubmit(volunteerForm)">
+  <input type="hidden" name="Id" #Id="ngModel" [(ngModel)]="volunteerService.selectedVolunteer.Id">
+    <div class="form-group">
+      <input class="form-control" name="Name" #Name="ngModel" [(ngModel)]="volunteerService.selectedVolunteer.Name"
+        placeholder="Name" required>
+      <div class="validation-error" *ngIf="Name.invalid && Name.touched">This Field is Required.</div>
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="Email" #Email="ngModel" [(ngModel)]="volunteerService.selectedVolunteer.Email"
+        placeholder="Email">
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="VPassword" #VPassword="ngModel" [(ngModel)]="volunteerService.selectedVolunteer.VPassword"
+        placeholder="VPassword">
+    </div>
+  <div class="form-group">
+      <select name="FVroleId" class="form-control" [(ngModel)]="volunteerService.selectedVolunteer.FVroleId" #FVroleId="ngModel" required>
+          <option [value]="null" selected>Select Vrole...</option>
+          <option *ngFor="let lstVrole of volunteerService.objVroleList" [value]="lstVrole.Id">{{lstVrole.Name}}</option>
+    </select> 
+    <div class="validation-error" *ngIf="FVroleId.invalid && FVroleId.touched">This Field is Required.</div>  
+  </div>
+  <div class="form-group">
+      <select name="FSchoolId" class="form-control" [(ngModel)]="volunteerService.selectedVolunteer.FSchoolId" #FSchoolId="ngModel" required>
+          <option [value]="null" selected>Select School...</option>
+          <option *ngFor="let lstSchool of volunteerService.objSchoolList" [value]="lstSchool.Id">{{lstSchool.Name}}</option>
+    </select> 
+    <div class="validation-error" *ngIf="FSchoolId.invalid && FSchoolId.touched">This Field is Required.</div>  
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-8">
+      <button [disabled]="!volunteerForm.valid" type="submit" class="btn btn-lg btn-block btn-info">
+        <i class="fa fa-floppy-o"></i> Submit</button>
+    </div>
+    <div class="form-group col-md-4">
+      <button type="button" class="btn btn-lg btn-block btn-secondary" (click)="resetForm(volunteerForm)">
+        <i class="fa fa-repeat"></i> Reset</button>
+    </div>
+  </div>
+</form>

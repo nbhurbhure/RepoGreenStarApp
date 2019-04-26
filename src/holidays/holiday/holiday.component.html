@@ -1,0 +1,46 @@
+<form class="holiday-form" #holidayForm="ngForm" (ngSubmit)="onSubmit(holidayForm)">
+  <input type="hidden" name="Id" #Id="ngModel" [(ngModel)]="holidayService.selectedHoliday.Id">
+    <div class="form-group">
+      <input class="form-control" name="Name" #Name="ngModel" [(ngModel)]="holidayService.selectedHoliday.Name"
+        placeholder="Name" required>
+      <div class="validation-error" *ngIf="Name.invalid && Name.touched">This Field is Required.</div>
+    </div>
+  <div class="form-group">
+      <select name="FHolidayTypeId" class="form-control" [(ngModel)]="holidayService.selectedHoliday.FHolidayTypeId" #FHolidayTypeId="ngModel" required>
+          <option [value]="null" selected>Select HolidayType...</option>
+          <option *ngFor="let lstHolidayType of holidayService.objHolidayTypeList" [value]="lstHolidayType.Id">{{lstHolidayType.Name}}</option>
+    </select> 
+    <div class="validation-error" *ngIf="FHolidayTypeId.invalid && FHolidayTypeId.touched">This Field is Required.</div>  
+  </div>
+  <div class="form-group">
+      <select name="FYearInfoId" class="form-control" [(ngModel)]="holidayService.selectedHoliday.FYearInfoId" #FYearInfoId="ngModel" required>
+          <option [value]="null" selected>Select YearInfo...</option>
+          <option *ngFor="let lstYearInfo of holidayService.objYearInfoList" [value]="lstYearInfo.Id">{{lstYearInfo.Name}}</option>
+    </select> 
+    <div class="validation-error" *ngIf="FYearInfoId.invalid && FYearInfoId.touched">This Field is Required.</div>  
+  </div>
+  <div class="form-group">
+      <select name="FMonthInfoId" class="form-control" [(ngModel)]="holidayService.selectedHoliday.FMonthInfoId" #FMonthInfoId="ngModel" required>
+          <option [value]="null" selected>Select MonthInfo...</option>
+          <option *ngFor="let lstMonthInfo of holidayService.objMonthInfoList" [value]="lstMonthInfo.Id">{{lstMonthInfo.Name}}</option>
+    </select> 
+    <div class="validation-error" *ngIf="FMonthInfoId.invalid && FMonthInfoId.touched">This Field is Required.</div>  
+  </div>
+  <div class="form-group">
+      <select name="FDayInfoId" class="form-control" [(ngModel)]="holidayService.selectedHoliday.FDayInfoId" #FDayInfoId="ngModel" required>
+          <option [value]="null" selected>Select DayInfo...</option>
+          <option *ngFor="let lstDayInfo of holidayService.objDayInfoList" [value]="lstDayInfo.Id">{{lstDayInfo.Name}}</option>
+    </select> 
+    <div class="validation-error" *ngIf="FDayInfoId.invalid && FDayInfoId.touched">This Field is Required.</div>  
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-8">
+      <button [disabled]="!holidayForm.valid" type="submit" class="btn btn-lg btn-block btn-info">
+        <i class="fa fa-floppy-o"></i> Submit</button>
+    </div>
+    <div class="form-group col-md-4">
+      <button type="button" class="btn btn-lg btn-block btn-secondary" (click)="resetForm(holidayForm)">
+        <i class="fa fa-repeat"></i> Reset</button>
+    </div>
+  </div>
+</form>
