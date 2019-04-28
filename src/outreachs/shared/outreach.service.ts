@@ -3,7 +3,7 @@ import { Http, Response, Headers, RequestOptions, RequestMethod } from '@angular
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
-import {Outreach} from'./outreach.model';
+import {Outreach} from'./outreachmodel';
 import {appconstants} from 'src/common/appconstants';
 
 @Injectable()
@@ -15,6 +15,8 @@ export class OutreachService {
   constructor(private http : Http) { }
 
   postOutreach(objOutreach : Outreach){
+    objOutreach.Id=0;
+    console.log(objOutreach.Id);
     var body = JSON.stringify(objOutreach);
     var headerOptions = new Headers({'Access-Control-Allow-Origin': '*','Content-Type':'application/json'});
     var requestOptions = new RequestOptions({method : RequestMethod.Post,headers : headerOptions});

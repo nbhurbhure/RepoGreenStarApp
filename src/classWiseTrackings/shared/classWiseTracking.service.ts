@@ -3,7 +3,7 @@ import { Http, Response, Headers, RequestOptions, RequestMethod } from '@angular
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
-import {ClassWiseTracking} from'./classWiseTracking.model';
+import {ClassWiseTracking} from'./classWiseTrackingmodel';
 import {appconstants} from 'src/common/appconstants';
 
 @Injectable()

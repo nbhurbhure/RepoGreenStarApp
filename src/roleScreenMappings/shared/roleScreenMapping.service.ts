@@ -3,10 +3,10 @@ import { Http, Response, Headers, RequestOptions, RequestMethod } from '@angular
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
-import {RoleScreenMapping} from'./roleScreenMapping.model';
+import {RoleScreenMapping} from'./roleScreenMappingmodel';
 import {appconstants} from 'src/common/appconstants';
-import {Vrole} from 'src/Vroles/shared/Vrole.model'
-import {Screen} from 'src/Screens/shared/Screen.model'
+import {Vrole} from 'src/vroles/shared/vrolemodel';
+import {Screen} from 'src/screens/shared/screenmodel';
 
 @Injectable()
 export class RoleScreenMappingService {

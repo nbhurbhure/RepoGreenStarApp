@@ -3,13 +3,13 @@ import { Http, Response, Headers, RequestOptions, RequestMethod } from '@angular
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
-import {StudentData} from'./studentData.model';
+import {StudentData} from'./studentDatamodel';
 import {appconstants} from 'src/common/appconstants';
-import {YearInfo} from 'src/YearInfos/shared/YearInfo.model'
-import {MonthInfo} from 'src/MonthInfos/shared/MonthInfo.model'
-import {DayInfo} from 'src/DayInfos/shared/DayInfo.model'
-import {Student} from 'src/Students/shared/Student.model'
-import {Parameter} from 'src/Parameters/shared/Parameter.model'
+import {YearInfo} from 'src/yearInfos/shared/yearInfomodel';
+import {MonthInfo} from 'src/monthInfos/shared/monthInfomodel';
+import {DayInfo} from 'src/dayInfos/shared/dayInfomodel';
+import {Student} from 'src/students/shared/studentmodel';
+import {Parameter} from 'src/parameters/shared/parametermodel';
 
 @Injectable()
 export class StudentDataService {

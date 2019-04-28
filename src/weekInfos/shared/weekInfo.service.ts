@@ -3,9 +3,9 @@ import { Http, Response, Headers, RequestOptions, RequestMethod } from '@angular
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
-import {WeekInfo} from'./weekInfo.model';
+import {WeekInfo} from'./weekInfomodel';
 import {appconstants} from 'src/common/appconstants';
-import {School} from 'src/Schools/shared/School.model'
+import {School} from 'src/schools/shared/schoolmodel'
 
 @Injectable()
 export class WeekInfoService {

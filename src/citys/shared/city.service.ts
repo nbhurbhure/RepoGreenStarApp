@@ -3,9 +3,9 @@ import { Http, Response, Headers, RequestOptions, RequestMethod } from '@angular
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
-import {City} from'./city.model';
+import {City} from'./citymodel';
 import {appconstants} from 'src/common/appconstants';
-import {Outreach} from 'src/Outreachs/shared/Outreach.model'
+import {Outreach} from 'src/outreachs/shared/outreachmodel';
 
 @Injectable()
 export class CityService {

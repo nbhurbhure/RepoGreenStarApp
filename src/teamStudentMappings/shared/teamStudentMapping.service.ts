@@ -3,10 +3,10 @@ import { Http, Response, Headers, RequestOptions, RequestMethod } from '@angular
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
-import {TeamStudentMapping} from'./teamStudentMapping.model';
+import {TeamStudentMapping} from'./teamStudentMappingmodel';
 import {appconstants} from 'src/common/appconstants';
-import {Team} from 'src/Teams/shared/Team.model'
-import {Student} from 'src/Students/shared/Student.model'
+import {Team} from 'src/teams/shared/teammodel'
+import {Student} from 'src/students/shared/studentmodel'
 
 @Injectable()
 export class TeamStudentMappingService {

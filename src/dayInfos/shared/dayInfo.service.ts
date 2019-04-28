@@ -3,9 +3,9 @@ import { Http, Response, Headers, RequestOptions, RequestMethod } from '@angular
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
-import {DayInfo} from'./dayInfo.model';
+import {DayInfo} from'./dayInfomodel';
 import {appconstants} from 'src/common/appconstants';
-import {MonthInfo} from 'src/MonthInfos/shared/MonthInfo.model'
+import {MonthInfo} from 'src/monthInfos/shared/monthInfomodel';
 
 @Injectable()
 export class DayInfoService {

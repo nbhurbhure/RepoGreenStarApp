@@ -3,11 +3,11 @@ import { Http, Response, Headers, RequestOptions, RequestMethod } from '@angular
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
-import {Login} from'./login.model';
+import {Login} from'./loginmodel';
 import {appconstants} from 'src/common/appconstants';
-import {Outreach} from 'src/Outreachs/shared/Outreach.model'
-import {City} from 'src/Citys/shared/City.model'
-import {School} from 'src/Schools/shared/School.model'
+import {Outreach} from 'src/outreachs/shared/outreachmodel';
+import {City} from 'src/citys/shared/citymodel';
+import {School} from 'src/schools/shared/schoolmodel';
 
 @Injectable()
 export class LoginService {

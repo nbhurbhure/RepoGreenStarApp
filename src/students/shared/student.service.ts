@@ -3,9 +3,9 @@ import { Http, Response, Headers, RequestOptions, RequestMethod } from '@angular
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
-import {Student} from'./student.model';
+import {Student} from'./studentmodel';
 import {appconstants} from 'src/common/appconstants';
-import {Section} from 'src/Sections/shared/Section.model'
+import {Section} from 'src/sections/shared/sectionmodel';
 
 @Injectable()
 export class StudentService {

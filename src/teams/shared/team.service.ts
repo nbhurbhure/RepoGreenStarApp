@@ -3,9 +3,9 @@ import { Http, Response, Headers, RequestOptions, RequestMethod } from '@angular
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
-import {Team} from'./team.model';
+import {Team} from'./teammodel';
 import {appconstants} from 'src/common/appconstants';
-import {Standard} from 'src/Standards/shared/Standard.model'
+import {Standard} from 'src/standards/shared/standardmodel'
 
 @Injectable()
 export class TeamService {

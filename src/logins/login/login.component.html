@@ -21,15 +21,13 @@
   </select> 
   <div class="validation-error" *ngIf="FSchoolId.invalid && FSchoolId.touched">This Field is Required.</div>  
 </div>
-
-  
   <input type="hidden" name="Id" #Id="ngModel" [(ngModel)]="loginService.selectedLogin.Id">
     <div class="form-group">
       <input class="form-control" name="UserNam" #UserNam="ngModel" [(ngModel)]="loginService.selectedLogin.UserNam"
         placeholder="UserNam">
     </div>
     <div class="form-group">
-      <input class="form-control" name="Password" #Password="ngModel" [(ngModel)]="loginService.selectedLogin.Password"
+      <input class="form-control" name="Password" #Password="ngModel" type="password" [(ngModel)]="loginService.selectedLogin.Password"
         placeholder="Password">
     </div>
   <div class="form-row">

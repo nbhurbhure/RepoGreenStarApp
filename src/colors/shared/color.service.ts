@@ -3,7 +3,7 @@ import { Http, Response, Headers, RequestOptions, RequestMethod } from '@angular
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
-import {Color} from'./color.model';
+import {Color} from'./colormodel';
 import {appconstants} from 'src/common/appconstants';
 
 @Injectable()

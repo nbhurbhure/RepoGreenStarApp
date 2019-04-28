@@ -3,10 +3,10 @@ import { Http, Response, Headers, RequestOptions, RequestMethod } from '@angular
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
-import {Volunteer} from'./volunteer.model';
+import {Volunteer} from'./volunteermodel';
 import {appconstants} from 'src/common/appconstants';
-import {Vrole} from 'src/Vroles/shared/Vrole.model'
-import {School} from 'src/Schools/shared/School.model'
+import {Vrole} from 'src/vroles/shared/vrolemodel'
+import {School} from 'src/schools/shared/schoolmodel'
 
 @Injectable()
 export class VolunteerService {

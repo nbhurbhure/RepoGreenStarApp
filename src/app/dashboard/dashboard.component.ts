@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ExcelData } from 'src/excelDatas/shared/excelData.model';
+import { ExcelData } from 'src/excelDatas/shared/excelDatamodel';
 import { StudentDataService } from 'src/studentDatas/shared/studentData.service';
 import { WeekInfoService } from 'src/weekInfos/shared/weekInfo.service';
 import { HolidayService } from 'src/holidays/shared/holiday.service';

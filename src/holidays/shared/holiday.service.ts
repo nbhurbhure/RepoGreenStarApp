@@ -3,13 +3,13 @@ import { Http, Response, Headers, RequestOptions, RequestMethod } from '@angular
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
-import {Holiday} from'./holiday.model';
+import {Holiday} from'./holidaymodel';
 import {appconstants} from 'src/common/appconstants';
-import {HolidayType} from 'src/HolidayTypes/shared/HolidayType.model'
-import {YearInfo} from 'src/YearInfos/shared/YearInfo.model'
-import {MonthInfo} from 'src/MonthInfos/shared/MonthInfo.model'
-import {DayInfo} from 'src/DayInfos/shared/DayInfo.model'
-import {School} from 'src/Schools/shared/School.model'
+import {HolidayType} from 'src/holidayTypes/shared/holidayTypemodel';
+import {YearInfo} from 'src/yearInfos/shared/yearInfomodel';
+import {MonthInfo} from 'src/monthInfos/shared/monthInfomodel';
+import {DayInfo} from 'src/dayInfos/shared/dayInfomodel';
+import {School} from 'src/schools/shared/schoolmodel';
 
 @Injectable()
 export class HolidayService {

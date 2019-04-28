@@ -3,7 +3,7 @@ import { Http, Response, Headers, RequestOptions, RequestMethod } from '@angular
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
-import {Vrole} from'./vrole.model';
+import {Vrole} from'./vrolemodel';
 import {appconstants} from 'src/common/appconstants';
 
 @Injectable()

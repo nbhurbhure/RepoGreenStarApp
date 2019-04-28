@@ -3,9 +3,9 @@ import { Http, Response, Headers, RequestOptions, RequestMethod } from '@angular
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
-import {Section} from'./section.model';
+import {Section} from'./sectionmodel';
 import {appconstants} from 'src/common/appconstants';
-import {Standard} from 'src/Standards/shared/Standard.model'
+import {Standard} from 'src/standards/shared/standardmodel';
 
 @Injectable()
 export class SectionService {

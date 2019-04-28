@@ -3,7 +3,7 @@ import { Http, Response, Headers, RequestOptions, RequestMethod } from '@angular
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
-import {IndividualTracking} from'./individualTracking.model';
+import {IndividualTracking} from'./individualTrackingmodel';
 import {appconstants} from 'src/common/appconstants';
 
 @Injectable()

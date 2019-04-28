@@ -3,7 +3,7 @@ import { Http, Response, Headers, RequestOptions, RequestMethod } from '@angular
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
-import {HolidayType} from'./holidayType.model';
+import {HolidayType} from'./holidayTypemodel';
 import {appconstants} from 'src/common/appconstants';
 
 @Injectable()
